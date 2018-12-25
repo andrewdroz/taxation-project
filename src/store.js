@@ -12,7 +12,8 @@ export const store = {
     this.state.annualSalary = Number(newSalary);
   },
   setProfile(profile) {
-    this.state.profile = profile;
+    if (profile == "") this.state.profile = "None selected";
+    else this.state.profile = profile;
   },
   setTaxableIncome() {
     this.state.taxableIncome = taxReliefsLogic.minusTaxRelief(
