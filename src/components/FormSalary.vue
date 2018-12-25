@@ -14,7 +14,7 @@ export default {
   name: "FormSalary",
   data: function() {
     return {
-      userSalary: 0
+      userSalary: store.state.annualSalary
     };
   },
   methods: {

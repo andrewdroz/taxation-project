@@ -2,7 +2,7 @@
   <div>
     <h3>Annual income: <b>{{ income }} IDR</b></h3>
     <h3>Profile: <b>{{ profile }}</b></h3>
-    <h3>Taxable income: <b>{{ taxableIncome }}</b></h3>
+    <h3>Taxable income: <b>{{ taxableIncome }} IDR</b></h3>
     <h1>Projected Tax Amount: {{ tax }} IDR</h1>
   </div>
 </template>

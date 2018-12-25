@@ -25,6 +25,7 @@
       
       <input type="submit" value="Update Profile" v-on:click.stop="dispatchProfile">
     </form>
+    <h5>Current profile: {{ profileInStore }}</h5>
   </div>
 </template>
 
@@ -35,13 +36,14 @@ export default {
   name: "FormReliefs",
   data: function() {
     return {
-      profileSelection: ""
+      profileSelection: "",
+      profileInStore: store.state.profile
     };
   },
   methods: {
     dispatchProfile: function() {
       store.setProfile(this.profileSelection);
-      store.setTaxableIncome();
+      this.profileInStore = this.profileSelection;
     }
   }
 };
